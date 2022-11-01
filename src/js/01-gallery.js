@@ -1,13 +1,12 @@
 // Add imports above this line
-import { galleryItems } from './gallery-items';
 import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+import { galleryItems } from './gallery-items';
 // Change code below this line
 
-import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const containerImg = document.querySelector('.gallery');
 const createdPic = createImageEl(galleryItems);
-containerImg.insertAdjacentHTML('afterBegin', createdPic);
 
 function createImageEl(galleryItems) {
   return galleryItems
@@ -26,6 +25,8 @@ function createImageEl(galleryItems) {
     .join('');
 }
 
+
+containerImg.insertAdjacentHTML('afterBegin', createdPic);
 containerImg.addEventListener('click', event => {
     event.preventDefault();
 
