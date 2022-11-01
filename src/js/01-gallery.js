@@ -26,7 +26,7 @@ function createImageEl(galleryItems) {
 }
 
 
-containerImg.insertAdjacentHTML('afterBegin', createdPic);
+containerImg.insertAdjacentHTML('beforeend', createdPic);
 containerImg.addEventListener('click', event => {
     event.preventDefault();
 
